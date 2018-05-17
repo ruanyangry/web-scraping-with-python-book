@@ -6,3 +6,6 @@ bsObj=BeautifulSoup(html)
 
 for child in bsObj.find("table",{"id":"giftList"}).children:
 	print(child)
+	
+for sibling in bsObj.find("table",{"id":"giftList"}).tr.next_siblings:
+	print(sibling)
